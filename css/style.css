@@ -72,7 +72,7 @@ body {
 .c-orange {
     color: #fc8eac;
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 5.9rem;
 }
 
 .home p {
@@ -297,7 +297,7 @@ body {
 
 /* Navbar improvements */
 .navbar {
-    background-color: #ffc1cc !important; /* Add this line to set the navbar background */
+    background-color: #d2d1e3 !important; /* Add this line to set the navbar background */
 }
 
 .nav-menu {
@@ -358,9 +358,9 @@ body {
 }
 
 .c-orange {
-    color: #fc8eac;
+    color: #9d96ff;
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 5.9rem;
 }
 
 .home p {
