@@ -114,28 +114,39 @@
             const element = document.getElementById("typewriter");
           
             function typeEffect() {
-              element.innerHTML = phrases[currentPhrase].slice(0, letterIndex);
-              if (direction === 1) {
-                if (letterIndex < phrases[currentPhrase].length) {
-                  letterIndex++;
-                  setTimeout(typeEffect, typingSpeed);
-                } else {
-                  setTimeout(() => {
-                    direction = -1;
-                    typeEffect();
-                  }, pauseTime);
-                }
-              } else if (direction === -1) {
-                
-                if (letterIndex > 0) {
-                  letterIndex--;
-                  setTimeout(typeEffect, typingSpeed);
-                } else {
-                  currentPhrase = (currentPhrase + 1) % phrases.length;
-                  direction = 1;
-                  setTimeout(typeEffect, typingSpeed);
-                }
+              word=phrases[currentPhrase].slice(0, letterIndex)
+              if (word.length<1)
+              {
+                console.log("ss")
+                element.innerHTML = "_"
               }
+              else
+              {
+                element.innerHTML = phrases[currentPhrase].slice(0, letterIndex);
+              }
+                if (direction === 1) {
+                  if (letterIndex < phrases[currentPhrase].length) {
+                    letterIndex++;
+                    setTimeout(typeEffect, typingSpeed);
+                  } else {
+                    setTimeout(() => {
+                      direction = -1;
+                      typeEffect();
+                    }, pauseTime);
+                  }
+                } else if (direction === -1) {
+                  
+                  if (letterIndex > 0) {
+                    letterIndex--;
+                    setTimeout(typeEffect, typingSpeed);
+                  } else {
+                    currentPhrase = (currentPhrase + 1) % phrases.length;
+                    direction = 1;
+                    setTimeout(typeEffect, typingSpeed);
+                  }
+                }
+              
+              
             }
           
             window.onload = typeEffect;
